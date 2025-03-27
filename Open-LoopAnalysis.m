@@ -39,7 +39,7 @@ disp(zeros);
 
 % Step response
 figure(1);
-t = 0:0.01:20; % Time vector up to 20 seconds
+t = 0:0.01:20; 
 step(G, t);
 title('Step Response of Open-Loop System G(s)');
 xlabel('Time (s)');
@@ -54,7 +54,7 @@ grid on;
 
 % Impulse response
 figure(3);
-t = 0:0.01:20; % Time vector up to 20 seconds (same as step response)
+t = 0:0.01:20;
 impulse(G, t);
 title('Impulse Response of Open-Loop System G(s)');
 xlabel('Time (s)');
