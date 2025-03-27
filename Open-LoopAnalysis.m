@@ -52,9 +52,19 @@ bode(G);
 title('Bode Plot of Open-Loop System G(s)');
 grid on;
 
+% Impulse response
+figure(3);
+t = 0:0.01:20; % Time vector up to 20 seconds (same as step response)
+impulse(G, t);
+title('Impulse Response of Open-Loop System G(s)');
+xlabel('Time (s)');
+ylabel('Pitch Angle \theta (rad)');
+grid on;
+
 % Save figures for report
 print(1, '-dpng', 'step_response.png');
 print(2, '-dpng', 'bode_plot.png');
+print(3, '-dpng', 'impulse_response.png');
 
 %% Display transfer function
 disp('Open-loop transfer function G(s):');
